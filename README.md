@@ -22,28 +22,6 @@ This project represents my foundational implementation of a Retrieval-Augmented 
 - Summarize retrieved context using Groq LLM integration
 - Persist vector index and metadata locally
 
-## Architecture Overview
-
-The system follows a standard RAG pipeline:
-
-1. **Document Loading**  
-   Files are scanned from the `data/` directory and loaded into LangChain document format.
-
-2. **Chunking**  
-   Documents are split into smaller overlapping chunks for better retrieval quality.
-
-3. **Embedding Generation**  
-   Each chunk is converted into a dense vector using the `all-MiniLM-L6-v2` sentence transformer model.
-
-4. **Vector Storage**  
-   Embeddings are stored in a FAISS index along with chunk metadata.
-
-5. **Retrieval**  
-   A user query is embedded and matched against the vector store to fetch the most relevant chunks.
-
-6. **Generation**  
-   Retrieved chunks are passed to the Groq LLM to generate a concise summary based on the query.
-
 ## Project Structure
 
 ```bash
@@ -119,34 +97,6 @@ Create a `.env` file in the project root:
 ```env
 GROQ_API_KEY=your_groq_api_key_here
 ```
-
-## Usage
-
-### 1. Add documents
-
-Place your files inside the `data/` folder.
-
-### 2. Build the vector store and test retrieval
-
-```bash
-python app.py
-```
-
-### 3. Example query flow
-
-The system can process a query like:
-
-```python
-query = "TYPE_YOUR_QUERY"
-```
-
-Then it:
-
-- retrieves the most relevant chunks from FAISS
-- builds a context block
-- sends the context to the Groq LLM
-- returns a generated summary
-
 
 ## Architecture Diagrams
 
