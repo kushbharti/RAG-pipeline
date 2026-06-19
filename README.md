@@ -147,7 +147,7 @@ Then it:
 - sends the context to the Groq LLM
 - returns a generated summary
 
-```md
+
 ## Architecture Diagrams
 
 ### RAG Overview
@@ -161,7 +161,6 @@ Then it:
 <img width="1536" height="639" alt="Rag--2" src="https://github.com/user-attachments/assets/5bbeeece-2e14-489e-be1c-dfeb0d85828b" />
 
 
-```
 
 ## Strengths
 
