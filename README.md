@@ -6,6 +6,22 @@ A Python-based Retrieval-Augmented Generation (RAG) project that loads documents
 
 This project represents my foundational implementation of a Retrieval-Augmented Generation (RAG) system. It serves as a structured, hands-on effort to understand how modern document ingestion, embedding, vector search, and LLM-based summarization work together in a real pipeline.
 
+
+
+## Architecture Diagrams
+
+### RAG Overview
+
+<img width="1228" height="478" alt="Rag--1" src="https://github.com/user-attachments/assets/b5abc013-683a-4997-abfa-2c395957c5bf" />
+
+### Complete RAG Pipeline
+
+<img width="1430" height="873" alt="Rag--3" src="https://github.com/user-attachments/assets/0757f35a-e1de-435a-a220-6486fe0b46c5" />
+
+<img width="1536" height="639" alt="Rag--2" src="https://github.com/user-attachments/assets/5bbeeece-2e14-489e-be1c-dfeb0d85828b" />
+
+
+
 ## Features
 
 - Load documents from multiple formats:
@@ -41,37 +57,6 @@ This project represents my foundational implementation of a Retrieval-Augmented 
 └── README.md
 ```
 
-## Module Breakdown
-
-### `data_loader.py`
-
-Loads supported files recursively from the given data directory using LangChain community loaders.
-
-### `embedding.py`
-
-Handles:
-
-- document chunking
-- embedding generation
-- embedding model initialization
-
-### `vectorstore.py`
-
-Builds, saves, loads, and queries the FAISS vector store.
-
-### `search.py`
-
-Connects retrieval with generation. It retrieves relevant chunks and sends them to the Groq LLM for summarization.
-
-### `app.py`
-
-Example entry point to:
-
-- load documents
-- build vector index
-- run similarity search
-- generate summaries
-
 ## Tech Stack
 
 - **Python**
@@ -97,20 +82,6 @@ Create a `.env` file in the project root:
 ```env
 GROQ_API_KEY=your_groq_api_key_here
 ```
-
-## Architecture Diagrams
-
-### RAG Overview
-
-<img width="1228" height="478" alt="Rag--1" src="https://github.com/user-attachments/assets/b5abc013-683a-4997-abfa-2c395957c5bf" />
-
-### Complete RAG Pipeline
-
-<img width="1430" height="873" alt="Rag--3" src="https://github.com/user-attachments/assets/0757f35a-e1de-435a-a220-6486fe0b46c5" />
-
-<img width="1536" height="639" alt="Rag--2" src="https://github.com/user-attachments/assets/5bbeeece-2e14-489e-be1c-dfeb0d85828b" />
-
-
 
 ## Strengths
 
