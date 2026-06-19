@@ -47,7 +47,7 @@ The system follows a standard RAG pipeline:
 ## Project Structure
 
 ```bash
-.
+
 ├── data/
 ├── faiss_store/
 │   ├── faiss.index
@@ -137,7 +137,7 @@ python app.py
 The system can process a query like:
 
 ```python
-query = "What is attention mechanism?"
+query = "TYPE_YOUR_QUERY"
 ```
 
 Then it:
@@ -147,18 +147,20 @@ Then it:
 - sends the context to the Groq LLM
 - returns a generated summary
 
-## Architecture Diagrams
-
-Add your three project images inside an `assets/` folder and reference them like this:
-
 ```md
 ## Architecture Diagrams
 
 ### RAG Overview
 
+<img width="1228" height="478" alt="Rag--1" src="https://github.com/user-attachments/assets/b5abc013-683a-4997-abfa-2c395957c5bf" />
+
 ### Complete RAG Pipeline
 
-### End-to-End Architecture
+<img width="1430" height="873" alt="Rag--3" src="https://github.com/user-attachments/assets/0757f35a-e1de-435a-a220-6486fe0b46c5" />
+
+<img width="1536" height="639" alt="Rag--2" src="https://github.com/user-attachments/assets/5bbeeece-2e14-489e-be1c-dfeb0d85828b" />
+
+
 ```
 
 ## Strengths
